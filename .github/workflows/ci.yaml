@@ -32,6 +32,7 @@ jobs:
             ghcr.io/${{ github.repository }}          
 
       - name: Build the docker Image
+        id: push
         uses: docker/build-push-action@v6
         with:
           context: .
